@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-//a
+
 public class Users extends Activity {
     EditText Nosaukums, Datums, Cena, Info;
     Context context = this;
