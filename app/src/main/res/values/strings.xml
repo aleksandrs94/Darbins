@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">GalaDarbs</string>
+    <string name="app_name">ProVent</string>
+    <string name="jauns_sludinajums">Jauns Sludinajums</string>
+    <string name="nosaukums">Nosaukums</string>
+    <string name="datums">Datums</string>
+    <string name="cena">Cena</string>
+    <string name="informacija">Informacija</string>
+    <string name="saglabat">Saglabat</string>
+    <string name="info">Info</string>
 </resources>
