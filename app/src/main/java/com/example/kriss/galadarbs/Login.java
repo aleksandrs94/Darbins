@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
 
                                 String name = jsonResponse.getString("name");
 
-                                Intent intent = new Intent(Login.this, Users.class);
+                                Intent intent = new Intent(Login.this, Main_Activity.class);
                                 intent.putExtra("name", name);
 
                                 Login.this.startActivity(intent);
