@@ -2,6 +2,7 @@ package com.example.kriss.galadarbs;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.DropBoxManager;
@@ -42,8 +43,20 @@ public class UserDBHelper extends SQLiteOpenHelper {
         Log.e("DATABASE OPERATION", "One row insert...");
         //db.execSQL(DROP_TABLE);
         //Log.e("DATABASE OPERATION", "Table dropped...");
+    }
+
+    public Cursor getInformations (SQLiteDatabase db)
+    {
+
+        Cursor cursor;
+            String[] projections = {Pievienot.JaunaSludInfo.NOSAUKUMS, Pievienot.JaunaSludInfo.DATUMS, Pievienot.JaunaSludInfo.CENA,
+                    Pievienot.JaunaSludInfo.INFO};
+
+            cursor = db.query(Pievienot.JaunaSludInfo.TABLE_NAME, projections, null, null, null, null, null);
+            return cursor;
 
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
