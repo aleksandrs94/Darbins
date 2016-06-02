@@ -67,7 +67,8 @@
         android:src="@drawable/provent_ico"
         android:layout_above="@+id/etEmail"
         android:layout_alignRight="@+id/etEmail"
-        android:layout_alignEnd="@+id/etEmail" />
+        android:layout_alignEnd="@+id/etEmail"
+        android:layout_marginLeft="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
