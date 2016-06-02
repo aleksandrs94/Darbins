@@ -7,29 +7,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.kriss.galadarbs.Register">
+    tools:context="com.example.kriss.galadarbs.Register"
+    android:background="@drawable/background">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etName"
-        android:layout_alignParentTop="true"
+        android:hint="Vārds"
+        android:layout_above="@+id/etSurname"
+        android:layout_alignRight="@+id/etSurname"
+        android:layout_alignEnd="@+id/etSurname"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Vārds" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etSurname"
-        android:layout_below="@+id/etName"
+        android:hint="Uzvārds"
+        android:layout_above="@+id/etEmail"
+        android:layout_alignRight="@+id/etEmail"
+        android:layout_alignEnd="@+id/etEmail"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/etName"
-        android:layout_alignEnd="@+id/etName"
-        android:hint="Uzvārds" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,12 +38,12 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/etEmail"
-        android:layout_below="@+id/etSurname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:hint="E-pasts"
+        android:layout_above="@+id/etPassword"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="E-pasts" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -50,12 +51,12 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/etPassword"
-        android:layout_below="@+id/etEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:hint="Parole"
+        android:layout_above="@+id/etPhone"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Parole" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,19 +64,8 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/etPhone"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Telefona nr." />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reģistrēties"
-        android:id="@+id/bRegister"
-        android:layout_below="@+id/etPhone"
+        android:hint="Telefona nr."
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -84,13 +74,33 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Reģistrēties"
+        android:id="@+id/bRegister"
+        android:background="@drawable/colorbutton"
+        android:layout_marginLeft="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_above="@+id/bCancel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:text="Atcelt"
         android:id="@+id/bCancel"
-        android:layout_below="@+id/bRegister"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="akt_Login" />
+        android:onClick="akt_Login"
+        android:background="@drawable/colorbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bRegister"
+        android:layout_toEndOf="@+id/bRegister" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Registracija"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

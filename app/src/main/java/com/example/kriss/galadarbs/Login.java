@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -33,6 +34,12 @@ public class Login extends AppCompatActivity {
                 final String email = etEmail.getText().toString();
                 final String password = etPassword.getText().toString();
 
+                if( email.trim().equals("") || password.trim().equals(""))
+                {
+                    Toast.makeText(getBaseContext(),"Ievadiet e-pastu un paroli!",Toast.LENGTH_LONG).show();
+                }
+                else{
+
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -41,9 +48,7 @@ public class Login extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-
                                 String name = jsonResponse.getString("name");
-
                                 Intent intent = new Intent(Login.this, Main_Activity.class);
                                 intent.putExtra("name", name);
 
@@ -64,6 +69,7 @@ public class Login extends AppCompatActivity {
                 LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login.this);
                 queue.add(loginRequest);
+            }
             }
         });
     }

@@ -5,12 +5,37 @@
     android:layout_height="match_parent"
 
     tools:context="com.example.kriss.galadarbs.DataListActivity"
-    android:clickable="false">
+    android:background="@drawable/background">
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/list_view"
-        ></ListView>
+        android:layout_below="@+id/jauns_slud_id"
+        android:layout_above="@+id/button4">
+        </ListView>
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="Atpakal"
+        android:id="@+id/button4"
+        android:onClick="openSludinajums"
+        android:clickable="true"
+        android:background="@drawable/colorbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Visi sludinajumi"
+        android:id="@+id/jauns_slud_id"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
 
 </RelativeLayout>

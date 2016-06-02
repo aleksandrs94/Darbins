@@ -39,7 +39,6 @@ public class Register extends AppCompatActivity {
                 final int phone = Integer.parseInt(etPhone.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
-
                     @Override
                     public void onResponse(String response) {
                     try{
@@ -48,6 +47,7 @@ public class Register extends AppCompatActivity {
 
                         if(success){
                             Intent intent = new Intent(Register.this, Login.class);
+
                             Register.this.startActivity(intent);
                         }else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);

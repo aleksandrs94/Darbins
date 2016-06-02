@@ -32,5 +32,11 @@ public class Main_Activity extends AppCompatActivity {
 
     }
 
+    public void ietAtpakal(View view)
+    {
+        Intent intent = new Intent(Main_Activity.this,Login.class);
+        startActivity(intent);
+
+    }
 
 }

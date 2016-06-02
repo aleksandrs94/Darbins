@@ -1,5 +1,6 @@
 package com.example.kriss.galadarbs;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -10,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 
-public class DataListActivity extends AppCompatActivity {
+public class DataListActivity extends Activity {
     ListView listView;
     SQLiteDatabase sqLiteDatabase;
     UserDBHelper userDBHelper;
@@ -49,9 +50,11 @@ public class DataListActivity extends AppCompatActivity {
         }
 
     }
+
     public void openSludinajums(View view)
     {
-        Intent intent = new Intent(context,DataListActivity.class);
-        context.startActivity(intent);
+        Intent intent = new Intent(DataListActivity.this,Main_Activity.class);
+        startActivity(intent);
     }
 }
+

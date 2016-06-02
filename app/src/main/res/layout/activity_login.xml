@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.kriss.galadarbs.Login">
 
     <EditText
@@ -15,12 +16,12 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/etEmail"
-        android:layout_alignParentTop="true"
+        android:hint="E-pasts"
+        android:layout_above="@+id/etPassword"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="E-pasts" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,33 +29,55 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/etPassword"
-        android:layout_below="@+id/etEmail"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:hint="Parole"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/etEmail"
+        android:layout_alignEnd="@+id/etEmail"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="Parole" />
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:text="Ieiet"
         android:id="@+id/bLogin"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/colorbutton"
+        android:layout_above="@+id/bRegisterHere"
+        android:layout_toRightOf="@+id/bRegisterHere"
+        android:layout_toEndOf="@+id/bRegisterHere" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reģistrēties"
         android:id="@+id/bRegisterHere"
-        android:layout_below="@+id/bLogin"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:onClick="akt_Register"
+        android:background="@drawable/colorbutton"
+        android:layout_marginLeft="71dp"
+        android:layout_marginStart="71dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="akt_Register" />
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/provent_ico"
+        android:layout_above="@+id/etEmail"
+        android:layout_alignRight="@+id/etEmail"
+        android:layout_alignEnd="@+id/etEmail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pro  ent"
+        android:id="@+id/textView"
+        android:textColor="#606060"
+        android:textSize="80dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

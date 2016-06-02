@@ -51,5 +51,12 @@ public class Users extends Activity {
 
     }
 
+    public void ietAtpakal(View view)
+    {
+        Intent intent = new Intent(Users.this,Main_Activity.class);
+        startActivity(intent);
+
+    }
+
 
 }
