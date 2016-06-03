@@ -36,13 +36,14 @@ public class DataListActivity extends Activity {
             do {
 
                 String nosaukums;
-                String datums, cena, info;
+                String vieta, datums, cena, info;
 
                 nosaukums = cursor.getString(0);
-                datums = cursor.getString(1);
-                cena = cursor.getString(2);
-                info = cursor.getString(3);
-                DataProvider dataProvider = new DataProvider(nosaukums,datums, cena, info);
+                vieta = cursor.getString(1);
+                datums = cursor.getString(2);
+                cena = cursor.getString(3);
+                info = cursor.getString(4);
+                DataProvider dataProvider = new DataProvider(nosaukums, vieta, datums, cena, info);
                 listDataAdapter.add(dataProvider);
 
             }while (cursor.moveToNext());

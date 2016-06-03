@@ -53,6 +53,7 @@ public class ListDataAdapter extends ArrayAdapter {
             row = layoutInflater.inflate(R.layout.row_layout,parent,false);
             layoutHandler = new LayoutHandler();
             layoutHandler.NOSAUKUMS = (TextView)row.findViewById(R.id.text_nosaukums);
+            //layoutHandler.VIETA = (TextView)row.findViewById(R.id.text_vieta);
             //layoutHandler.DATUMS = (TextView)row.findViewById(R.id.text_datums);
             //layoutHandler.CENA = (TextView)row.findViewById(R.id.text_cena);
             //layoutHandler.INFO = (TextView)row.findViewById(R.id.text_info);
@@ -67,6 +68,7 @@ public class ListDataAdapter extends ArrayAdapter {
         }
         DataProvider dataProvider = (DataProvider) this.getItem(position);
         layoutHandler.NOSAUKUMS.setText(dataProvider.getNosaukums());
+        //layoutHandler.VIETA.setText(dataProvider.getVieta());
         //layoutHandler.DATUMS.setText(dataProvider.getDatums());
         //layoutHandler.CENA.setText(dataProvider.getCena());
         //layoutHandler.INFO.setText(dataProvider.getInfo());
